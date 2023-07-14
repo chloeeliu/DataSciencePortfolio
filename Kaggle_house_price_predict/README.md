@@ -1,9 +1,16 @@
 # House Price Predict
 
-## Result
 competition from :https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
+
 my submission result: top 3% ranking
 
+-- todo
+贴图片，并且修改下最后train model部分
+
+
+## Acknowledgements
+
+This project is inspired by the work of [Author's Name] and their project [Project Name]. I would like to express my gratitude for their insightful contributions, which served as a valuable reference and inspiration for this project. While I have conducted additional feature engineering and outlier review on my own, their initial work provided a solid foundation for my study and analysis.
 
 ## Project Introducion
 
@@ -41,5 +48,42 @@ Here is my preprocessing procedure in order:
 | One-hot encoding | Apply one-hot encoding to non-ordinal categorical features | - Convert non-ordinal categorical features, such as wall material (wood, brick), into binary columns representing each category |
 | Check feature skewness | Apply logarithmic transformation to skewed features | - Log-transform features that exhibit significant skewness in their distributions |
 
+## Exploratory Data Analysis
+
+Through exploratory data analysis, I gained valuable insights into the dataset. Visualizations such as scatter plots, correlation matrices, and box plots revealed interesting relationships between features and house prices. For example, I observed a strong positive correlation between the number of rooms and the sale price. These insights guided my feature selection and modeling decisions.
+
+-- 贴个图片，一个相关矩阵，一个单独特征的。
+
+
+
+## Modeling Approach
+
+To tackle the regression task, I explored several algorithms, including linear regression, decision trees, and ensemble methods like random forests and gradient boosting. I selected these algorithms based on their ability to handle both numerical and categorical features. I also split the data into a training set and a separate validation set to assess model performance effectively.
+
+I developed multiple models using different algorithms and evaluated their performance on the validation set. I implemented cross-validation techniques to fine-tune hyperparameters and mitigate overfitting. To ensure model reproducibility, I wrapped the entire modeling pipeline into modular functions and classes, allowing for easy experimentation and future improvements
+
+
+| Regression Algorithm       | Algorithm Type | Algorithm Pros and Cons                                                                                                                                                                      |
+|---------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ElasticNet                | Linear         | Pros: <br>- Combines L1 and L2 regularization<br>- Suitable for high-dimensional data<br>- Controls for overfitting<br><br> Cons: <br>- May struggle with highly correlated features          |
+| Ridge                     | Linear         | Pros: <br>- Handles multicollinearity<br>- Stable and robust<br>- Less sensitive to outliers<br><br> Cons: <br>- Assumes linear relationship between features and target                    |
+| Lasso                     | Linear         | Pros: <br>- Performs feature selection<br>- Handles multicollinearity<br><br> Cons: <br>- Selects only one feature among correlated features                                                        |
+| KernelRidge               | Non-linear     | Pros: <br>- Handles non-linear relationships<br>- Incorporates kernel trick to model complex patterns<br><br> Cons: <br>- Can be computationally expensive for large datasets               |
+| LGBMRegressor             | Non-linear     | Pros: <br>- High performance and efficiency<br>- Handles large datasets<br>- Supports categorical features without one-hot encoding<br><br> Cons: <br>- May overfit with small datasets        |
+| XGBRegressor              | Non-linear     | Pros: <br>- Handles complex relationships<br>- Handles missing values<br>- Regularization to control overfitting<br><br> Cons: <br>- Requires careful tuning of hyperparameters                  |
+| CatBoostRegressor         | Non-linear     | Pros: <br>- Handles categorical features without explicit encoding<br>- Handles missing values<br>- Robust to outliers<br><br> Cons: <br>- Can be computationally expensive for large datasets |
+| GradientBoostingRegressor | Non-linear     | Pros: <br>- Handles complex relationships<br>- Robust to outliers<br>- Handles missing values<br><br> Cons: <br>- Requires careful tuning of hyperparameters                                  |
+
+
+## Model Evaluation and Validation
+
+After training and validating the models, I assessed their performance using evaluation metrics such as Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE). These metrics demonstrated the model's efficacy in capturing the underlying patterns in the data.
+
+-- 贴表格的图
+
+
+## Results and Conclusion
+
+In conclusion, the developed regression model successfully predicted house prices with a reasonable level of accuracy. The insights gained from the analysis and feature engineering techniques showcased the importance of various features in influencing house prices. However, it is essential to note that further improvements could be made, such as incorporating more advanced algorithms or exploring additional external datasets to enhance predictive performance.
 
 
