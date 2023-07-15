@@ -79,7 +79,16 @@ I developed multiple models using different algorithms and evaluated their perfo
 
 After training and validating the models, I assessed their performance using evaluation metrics such as Root Mean Squared Error (RMSE) and Mean Absolute Error (MAE). These metrics demonstrated the model's efficacy in capturing the underlying patterns in the data.
 
--- 贴表格的图
+| Algorithm   | Average Score |
+|-------------|---------------|
+| ENet        | 0.8884113227995659  |
+| Ridge       | 0.9028344299479347  |
+| Lasso       | 0.8956710656297169  |
+| KRR         | 0.815280732992204   |
+| LGBM        | 0.8981491783771111  |
+| XGB         | 0.9097819332676368  |
+| CatB        | 0.9116758363725838  |
+| GBR         | 0.9055917503254991  |
 
 
 ## Results and Conclusion
