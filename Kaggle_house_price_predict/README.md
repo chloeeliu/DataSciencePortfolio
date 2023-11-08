@@ -1,11 +1,10 @@
-# House Price Predict
+# House Price Predict top 3% ranking
 
 competition from :https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
 
 my submission result: top 3% ranking
 
--- todo
-贴图片，并且修改下最后train model部分
+
 
 
 ## Acknowledgements
