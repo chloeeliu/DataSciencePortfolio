@@ -13,9 +13,9 @@ This project aims to tackle the pervasive issue of fake news by using advanced n
 
 Customize the training by modifying the arguments:
 
---model: Pre-trained BERT model (default: bert-base-uncased).
---epoch: Number of training epochs (default: 2).
---lr: Learning rate (default: 2e-5).
---bs: Batch size (default: 32).
+- model: Pre-trained BERT model (default: bert-base-uncased).
+- epoch: Number of training epochs (default: 2).
+- lr: Learning rate (default: 2e-5).
+- bs: Batch size (default: 32).
 
 ```python main.py --model bert-base-uncased --epoch 3 --lr 5e-5 --bs 16```
